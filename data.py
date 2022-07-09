@@ -1,3 +1,7 @@
+import requests
+import json
+
+
 question_data = [
     {"text": "A slug's blood is green.", "answer": "True"},
     {"text": "The loudest animal is the African Elephant.", "answer": "False"},
@@ -14,3 +18,16 @@ question_data = [
     {"text": "No piece of square dry paper can be folded in half more than 7 times.", "answer": "False"},
     {"text": "A few ounces of chocolate can to kill a small dog.", "answer": "True"}
 ]
+
+db_api = requests.get('https://opentdb.com/api.php?amount=10&type=boolean')
+json_request = db_api.json()
+pretty_json = json.dumps(json_request, indent=4)
+
+json_list = json_request["results"]
+
+
+
+
+
+
+
