@@ -13,17 +13,12 @@ for question in question_data:
 
 quiz = QuizBrain(question_bank)
 
-continue_game = True
-while continue_game:
-    test = quiz.next_question()
-    # print(test)
-    if not test:
-        continue_game = False
-        print(f"That was incorrect, {quiz.score} is your final score.")
-    else:
-        print("GoodJob, Next Question.\n")
-        time.sleep(2)
-        quiz.score += 1
+while quiz.still_has_question():
+    continue
+
+
+
+
 
 
 
