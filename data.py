@@ -19,7 +19,7 @@ question_data = [
     {"text": "A few ounces of chocolate can to kill a small dog.", "answer": "True"}
 ]
 
-db_api = requests.get('https://opentdb.com/api.php?amount=10&type=boolean')
+db_api = requests.get('https://opentdb.com/api.php?amount=10&category=18&type=boolean')
 json_request = db_api.json()
 pretty_json = json.dumps(json_request, indent=4)
 
